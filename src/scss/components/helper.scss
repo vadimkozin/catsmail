@@ -1,0 +1,12 @@
+$count: 64; // количество классов : mt1, mt2, ..mt64
+
+@for $i from 1 through $count {
+  .mt#{$i} {
+    margin-top: #{$i}px;
+  }
+}
+@for $i from 1 through $count {
+  .mb#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}

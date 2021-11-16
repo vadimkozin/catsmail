@@ -1,0 +1,32 @@
+.button {
+  font-family: var(--ff-secondary);
+  font-size: 16px;
+  line-height: 21px;
+  padding: 6px 29px;
+  border-radius: 4px;
+  border: none;
+
+  background-color: var(--default-link-color);
+  color: var(--background-color);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--default-hover-color);
+  }
+  &:active {
+    background-color: var(--default-active-color);
+  }
+
+  &__icon {
+    width: 18px;
+    height: 16px;
+  }
+
+  &-max {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    @media screen and (min-width: $break-point-568) {
+      max-width: max-content;
+    }
+  }
+}

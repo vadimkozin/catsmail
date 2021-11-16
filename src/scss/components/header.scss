@@ -1,0 +1,44 @@
+.header {
+  @media screen and (min-width: $break-point-736) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__controls {
+    @media screen and (min-width: $break-point-568) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    outline: none;
+  }
+  
+  &__logo {
+    &-icon {
+      width: 48px;
+      height: 42px;
+    }
+    &-text {
+      margin-left: 4px;
+      font-size: 64px;
+      line-height: 83px;
+    }
+    &:hover {
+      color: var(--default-hover-color);
+    }
+    &:active {
+      color: var(--default-active-color);
+    }
+  }
+  &__entry {
+    display: block;
+    margin: 15px auto 0;
+    @media screen and (min-width: $break-point-568) {
+      margin: 0;
+      margin-left: 20px;
+    }
+  }
+}

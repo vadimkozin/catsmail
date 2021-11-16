@@ -1,0 +1,55 @@
+.post {
+  &__message {
+    width: 100%;
+
+    &-text {
+      width: inherit;
+      height: 160px;
+      resize: vertical;
+      border: 1px solid var(--border-default-color);
+      border-radius: 4px;
+      &:hover {
+        border: 1px solid var(--border-hover-color);
+      }
+      &:active {
+        outline: none;
+        border: 2px solid var(--border-active-color);
+      }
+    }
+
+    &-title {
+      display: block;
+      font-size: 28px;
+      line-height: 36px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__options-legend,
+  &__contacts-legend {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  &__options {
+    &-legend {
+      margin-bottom: 16px;
+    }
+    &-item {
+      display: block;
+      &:not(:first-child) {
+        margin-top: 19px;
+      }
+    }
+  }
+
+  &__contacts {
+    &-item {
+      display: block;
+      &:not(:first-child) {
+        margin-top: 23px;
+      }
+    }
+  }
+}

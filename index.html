@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cats mail</title>
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <a class="header__link" href="/">
+        <div class="header__logo">
+          <svg class="header__logo-icon">
+            <use href="./src/images/sprite.svg#logo"></use>
+          </svg>
+          <span class="header__logo-text">Котопочта</span>
+        </div>
+      </a>
+      <div class="header__controls">
+        <nav class="header__nav">
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="#" class="nav__item_link">Забрать кота себе</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item_link">Задонатить на корм</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__entry button">Войти</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="available-hidden">Котопочта - первый сервис почты для котов и кошек</h1>
+      <div class="promo">
+        <h2 class="promo__title">Как это работает?</h2>
+        <p class="promo__text">
+          Наши коты любят, когда с ними разговаривают. Напишите письмо, и мы прочитаем его котам, когда они
+          придут почесать пузо.
+        </p>
+      </div>
+      <div class="promo">
+        <h2 class="promo__title">Что передать котам?</h2>
+        <p class="promo__text">
+          Можно рассказать где вы видели вкусных мышей, какого размера синицы прилетели в город, или просто
+          интересную историю из жизни.
+        </p>
+      </div>
+
+      <form class="post">
+        <label class="post__message">
+          <span class="post__message-title">Сообщение</span>
+          <textarea class="post__message-text"></textarea>
+        </label>
+
+        <fieldset class="post__options mt32">
+          <legend class="post__options-legend">Дополнительные опции</legend>
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="options-1" name="options" value="1" />
+            <label class="checkbox__label" for="options-1">Сделать пуньк в нос</label>
+            <svg class="checkbox__icon">
+              <use href="./src/images/sprite.svg#checkbox"></use>
+            </svg>
+          </div>
+          <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="options-2" name="options" value="2" checked />
+            <label class="checkbox__label" for="options-2">Угостить вкусняшкой</label>
+            <svg class="checkbox__icon">
+              <use href="./src/images/sprite.svg#checkbox"></use>
+            </svg>
+          </div>
+        </fieldset>
+
+        <fieldset class="post__contacts mt32">
+          <legend class="post__contacts-legend">Контакты для связи</legend>
+          <div class="post__contacts-item item">
+            <label class="item__label" for="name">Ваше имя</label>
+            <div class="item__value">
+              <input class="item__input" type="text" id="name" />
+              <span class="item__help">Ваше имя, а не имя вашего любимца</span>
+            </div>
+          </div>
+          <div class="post__contacts-item item">
+            <label class="item__label" for="email">Email</label>
+            <div class="item__value">
+              <input class="item__input" type="email" id="email" placeholder="youremail@catmail.org" />
+              <span class="item__help">Мы вышлем вам фото довольного кошачьего лица</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <button class="post__send button button-max mt64">
+          <svg class="button__icon">
+            <use xlink:href="./src/images/sprite.svg#logo"></use>
+          </svg>
+          Отправить
+        </button>
+      </form>
+    </main>
+
+    <aside class="photo">
+      <section class="photo__block">
+        <h3 class="photo__title">Довольные коты</h3>
+        <img
+          class="photo__image"
+          src="./src/images/image1.jpg"
+          alt="cat"
+          srcset="./src/images/image1.jpg 1x, ./src/images/image1@2x.jpg 2x, ./src/images/image1@3x.jpg 3x" />
+        <img
+          class="photo__image"
+          src="./src/images/image2.jpg"
+          alt="cat 2"
+          srcset="./src/images/image2.jpg 1x, ./src/images/image2@2x.jpg 2x, ./src/images/image2@3x.jpg 3x" />
+        <img
+          class="photo__image"
+          src="./src/images/image3.jpg"
+          alt="cat 3"
+          srcset="./src/images/image3.jpg 1x, ./src/images/image3@2x.jpg 2x, ./src/images/image3@3x.jpg 3x" />
+      </section>
+    </aside>
+    &nbsp;
+  </body>
+</html>

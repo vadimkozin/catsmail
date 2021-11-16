@@ -1,0 +1,87 @@
+/*
+<div class="checkbox">
+  <input class="checkbox__input" type="checkbox" id="options-1" name="options" value="1">
+  <label class="checkbox__label" for="options-1">Сделать пуньк в нос</label>
+  <svg class="checkbox__icon">
+    <use href="./src/images/sprite.svg#checkbox"></use>
+  </svg>
+</div>
+*/
+
+.checkbox {
+  position: relative;
+  &:not(:first-of-type) {
+    margin-top: 29px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    width: 17px;
+    height: 14px;
+    color: var(--default-link-color);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // скрытие оригинального input
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  // надпись
+  &__input + &__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    // квадратик перед надписью
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid var(--border-default-color);
+      border-radius: 0.25em;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      box-sizing: border-box;
+    }
+  }
+
+  // наведении курсора на checkbox
+  &__input:not(:disabled) + &__label:hover::before {
+    border-color: var(--border-hover-color);
+  }
+
+  // активный чекбокс (при нажатии на него) */
+  &__input:not(:disabled):active + &__label::before {
+    border: 2px solid var(--border-active-color);
+  }
+
+  // чекбокс в состоянии checked - квадратик
+  &__input:checked + &__label::before {
+    background-color: var(--background-color);
+  }
+
+  // чекбокс в состоянии checked - галочка
+  &__input:checked + &__label + &__icon {
+    opacity: 1;
+  }
+
+  // чекбокс в фокусе
+  &__input:focus + label::before {
+    box-shadow: 0 0 0 0.2rem var(--outlite-color);
+  }
+
+  // чекбокс в состоянии disabled
+  &__input:disabled + &__label::before {
+    background-color: var(--disabled-color);
+  }
+}

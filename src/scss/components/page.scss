@@ -1,0 +1,36 @@
+/*
+Страница целиком
+из макета:
+ на малых устройствах - всё в одну колонку
+ на больших - header и под ним 2 колонки: 660px, gap 40px, 300px
+ берём за основу отношение колонок 660/300 = 2.2
+*/
+.page {
+  max-width: 94vw;
+  margin: 0 auto;
+  color: var(--default-color);
+
+  @media screen and (min-width: $break-point-568) {
+    max-width: var(--container-width-max);
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'main aside';
+    grid-template-columns: 2.2fr 1fr;
+    grid-gap: 40px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .photo {
+    grid-area: aside;
+  }
+}

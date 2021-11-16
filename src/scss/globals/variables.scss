@@ -1,0 +1,26 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --blue-1: #0078bb;
+  --blue-2: #62b9ea;
+  --blue-3: #0a6ea6;
+  --blue-4: #62b9ea;
+  --grey-1: #808080;
+
+  --default-color: var(--black);
+  --default-link-color: var(--blue-1);
+  --default-hover-color: var(--blue-2);
+  --default-active-color: var(--blue-3);
+  --border-default-color: rgba(0, 0, 0, 0.15);
+  --border-hover-color: rgba(0, 0, 0, 0.35);
+  --border-active-color: var(--blue-4);
+  --background-color: var(--white);
+  --help-color: var(--grey-1);
+  --outlite-color: rgba(0, 123, 255, 0.45);
+  --disabled-color: #e9ecef;
+
+  --ff-primary: 'PT Sans Narrow', sans-serif;
+  --ff-secondary: 'PT Sans', sans-serif;
+
+  --container-width-max: 1000px;
+}

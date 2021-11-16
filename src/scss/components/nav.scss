@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 19px;
+    }
+
+    &_link {
+      font-family: var(--ff-secondary);
+      font-size: 16px;
+      line-height: 21px;
+      color: var(--default-link-color);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--default-hover-color);
+      }
+
+      &:active {
+        color: var(--default-active-color);
+      }
+    }
+  }
+}
