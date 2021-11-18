@@ -1,9 +1,16 @@
 .nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: $break-point-375) {
+    flex-wrap: initial;
+  }
 
   &__item {
     &:not(:first-child) {
+      margin-left: 19px;
+    }
+    @media screen and (min-width: $break-point-568) {
       margin-left: 19px;
     }
 
